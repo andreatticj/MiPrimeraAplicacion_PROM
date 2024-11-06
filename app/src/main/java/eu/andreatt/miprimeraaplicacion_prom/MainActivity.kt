@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     var tasks = mutableListOf<String>() // Lista mutable para almacenar las tareas
 
     /**
-     * Método que se llama al crear la actividad.
+     * Metodo que se llama al crear la actividad.
      * Inicializa la interfaz y los componentes necesarios.
      */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que inicializa las variables y configura la interfaz de usuario.
+     * Metodo que inicializa las variables y configura la interfaz de usuario.
      */
     private fun initUi() {
         initVariables() // Inicializa las variables de los elementos de la interfaz
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que configura el RecyclerView para mostrar las tareas.
+     * Metodo que configura el RecyclerView para mostrar las tareas.
      * Se establece el LayoutManager y se asocia el adaptador.
      */
     private fun initRecyclerView() {
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que permite eliminar una tarea de la lista.
+     * Metodo que permite eliminar una tarea de la lista.
      * Notifica al adaptador que se ha eliminado un elemento y actualiza las preferencias.
      *
      * @param position La posición de la tarea a eliminar en la lista.
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que inicializa las variables de los elementos de la interfaz.
+     * Metodo que inicializa las variables de los elementos de la interfaz.
      */
     private fun initVariables() {
         etTask = findViewById(R.id.etTask) // Inicializa el campo de texto para la tarea
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que configura los listeners para los botones de la interfaz.
+     * Metodo que configura los listeners para los botones de la interfaz.
      */
     private fun initListeners() {
         // Configura el listener para el botón de agregar tarea
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Método que agrega una nueva tarea a la lista.
+     * Metodo que agrega una nueva tarea a la lista.
      * Guarda la lista actualizada de tareas y limpia el campo de texto.
      */
     private fun addTask() {
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         val itemTouchHelper = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
 
             /**
-             * Método que maneja el movimiento de un elemento dentro del RecyclerView.
+             * Metodo que maneja el movimiento de un elemento dentro del RecyclerView.
              * En este caso, no se utiliza, así que devuelve false.
              *
              * @param recyclerView El RecyclerView donde ocurre el movimiento.
@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             /**
-             * Método que se llama para dibujar el ítem mientras se desliza.
+             * Metodo que se llama para dibujar el ítem mientras se desliza.
              * Cambia el color del fondo del ítem a rojo mientras se desliza.
              *
              * @param c Canvas donde se dibuja el RecyclerView.
@@ -156,7 +156,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             /**
-             * Método que se llama cuando un ítem ha sido deslizado.
+             * Metodo que se llama cuando un ítem ha sido deslizado.
              * Llama a la función de eliminación después del deslizamiento.
              *
              * @param viewHolder El ViewHolder que fue deslizado.
@@ -168,7 +168,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             /**
-             * Método que se llama para limpiar la vista del ítem después de que se ha deslizado.
+             * Metodo que se llama para limpiar la vista del ítem después de que se ha deslizado.
              * Restablece el color de fondo al original.
              *
              * @param recyclerView El RecyclerView donde se encuentra el ítem.

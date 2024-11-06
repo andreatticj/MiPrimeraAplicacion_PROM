@@ -28,7 +28,7 @@ class TaskAdapter(
     override fun getItemCount() = tasks.size
 
     /**
-     * Llama al método render para actualizar el contenido de cada elemento del RecyclerView.
+     * Llama al metodo render para actualizar el contenido de cada elemento del RecyclerView.
      */
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         holder.render(tasks[position], onItemDone)
